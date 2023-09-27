@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <style>
+          body{
+            font-family: sans-serif;
+          }
+        </style>
+    </head>
+    <body>
+      <p id="test"></p>
+      <script>
+        let test = document.querySelector('#test');
+        let x = "foo";
+        test.innerHTML = isNaN(x);
+        d = new Date("2023-09-27");
+        test.innerHTML += "<br>";
+        test.innerHTML += d;
+      </script>
+    </body>
+</html>
