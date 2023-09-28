@@ -11,13 +11,28 @@
     </head>
     <body>
       <p id="test"></p>
+      <ul id="list">
+      </ul>
+      <pre id="pre"></pre>
+
       <script>
         let test = document.querySelector('#test');
+        let list = document.querySelector('#list');
+        let pre = document.querySelector('#pre');
         let x = "foo";
+        const colors =["red", "green", "blue"];
+
         test.innerHTML = isNaN(x);
         d = new Date("2023-09-27");
+
         test.innerHTML += "<br>";
-        test.innerHTML += d;
+        test.innerHTML += d.toISOString();
+
+        for (color of colors){
+          let li=document.createElement('li');
+          li.textContent = color;
+          list.appendChild(li);
+        }
       </script>
     </body>
 </html>
