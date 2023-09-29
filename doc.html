@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>JavaScript Testing</title>
         <style>
           body{
             font-family: sans-serif;
@@ -15,13 +15,16 @@ background-color: #ffc;
       <ul id="list">
       </ul>
       <pre id="pre"></pre>
-
+      <p id="demo"></p>
+      <p id="demo2"></p>
       <script>
         let test = document.querySelector('#test');
         let list = document.querySelector('#list');
         let pre = document.querySelector('#pre');
+        let demo2 = document.querySelector('#demo2');
         let x = "foo";
         const colors =["red", "green", "blue"];
+        let allPs = document.querySelectorAll("p");
 
         test.innerHTML = isNaN(x);
         d = new Date("2023-09-27");
@@ -34,6 +37,20 @@ background-color: #ffc;
           li.textContent = color;
           list.appendChild(li);
         }
+        const numbers = [45, 4, 9, 16, 25];
+
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = txt;
+
+        function myFunction(value, index, array) {
+          txt += index + ": " + value + "<br>";
+        }
+
+for (p of allPs) {
+  p.setAttribute("style", "color:white;background-color:black; padding:.2em;")
+}
+
       </script>
     </body>
 </html>
